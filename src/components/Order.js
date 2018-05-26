@@ -1,14 +1,9 @@
-import React from 'react';
+import React from "react";
 
 class Order extends React.Component {
-    render() {
-        return (
-            <order className="order">
-                
-            </order>
-            
-        );
-    }
+  render() {
+    return <div className="order">Order!!!</div>;
+  }
 }
 
 export default Order;
