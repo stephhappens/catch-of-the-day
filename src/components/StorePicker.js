@@ -9,22 +9,26 @@ class StorePicker extends React.Component {
     goToStore = event => {        
         // Stop the form from submitting
         event.preventDefault();
+
         // get the text from the input
-        console.log(this.myInput);
+        const storeName = this.myInput.value.value;
+
         // Change to page to /store/storename
+        this.props.history.push(`/store/${storeName}`)
     }
     render() {
         return (
         <React.Fragment>
             <form className="store-selector" onSubmit={this.goToStore}>
                 <h2>Please Enter a Store</h2>
-                <input type="text"
-                ref="{this.myInput}"
+                <input 
+                type="text"
+                ref={this.myInput}
                 required 
                 placeholder="Store Name" 
                 defaultValue={getFunName()}
                 />
-                <button type="submit" onClick={this.buttonClick}>Visit Store></button>
+                <button type="submit">Visit Store></button>
             </form> 
         </React.Fragment>
         )      
