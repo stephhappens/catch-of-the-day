@@ -25,7 +25,7 @@ class StorePicker extends React.Component {
                 type="text"
                 ref={this.myInput}
                 required 
-                placeholder="Store Name" 
+                placeholder="puppies" 
                 defaultValue={getFunName()}
                 />
                 <button type="submit">Visit Store></button>
